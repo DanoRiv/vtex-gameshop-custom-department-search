@@ -1,9 +1,9 @@
 import React from 'react'
+import { useCssHandles } from 'vtex.css-handles'
 
 type Props = {
   departments: [Category],
-  handleSetSlug: any,
-  classes: string
+  handleSetSlug: any
 }
 
 type Category = {
@@ -12,24 +12,37 @@ type Category = {
   slug: string
 }
 
-const DepartmentGroup = ({departments, handleSetSlug, classes}: Props) => {
+const DepartmentGroup = ({ departments, handleSetSlug }: Props) => {
 
-  const onHandleSetSlug = (event: any)=> {
+  const CSS_HANDLES = [
+    'selectContainer',
+    'selectDropdown',
+    'selectOption'
+  ]
+  const handles = useCssHandles(CSS_HANDLES)
+  const onHandleSetSlug = (event: any) => {
     handleSetSlug(`${event.target.value}/$\{term\}&map=ft`)
   }
 
-  const departmentOptions: any = departments.map((department: Category)=>{
+  const departmentOptions: any = departments.map((department: Category) => {
     return (
-      <option value={department.slug} key={department.id}>
+      <option value={department.slug} key={department.id} className={handles.selectOption}>
         {department.name}
       </option>
     )
   })
 
   return (
-    <div className={classes}>
-      <select defaultValue="value0" onChange={onHandleSetSlug}>
-        <option disabled value="value0">Todo</option>
+    <div className={handles.selectContainer}>
+      <select
+        defaultValue="value0"
+        onChange={onHandleSetSlug}
+        className={handles.selectDropdown}
+      >
+        <option
+          disabled
+          value="value0"
+          className={handles.selectOption}>Todo</option>
         {departmentOptions}
       </select>
     </div>
