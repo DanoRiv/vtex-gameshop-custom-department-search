@@ -28,8 +28,8 @@ const DepartmentGroup = ({departments, handleSetSlug, classes}: Props) => {
 
   return (
     <div className={classes}>
-      <select name="" id="" defaultValue="value0" onChange={onHandleSetSlug}>
-        <option disabled value="value0">Seleccione una opción</option>
+      <select defaultValue="value0" onChange={onHandleSetSlug}>
+        <option disabled value="value0">Todo</option>
         {departmentOptions}
       </select>
     </div>
