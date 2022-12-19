@@ -10,7 +10,7 @@
 
 This component allows the user to search products within a certain department
 
-![Custom department search]([https://user-images.githubusercontent.com/52087100/71204177-42ca4f80-227e-11ea-89e6-e92e65370c69.png](https://res.cloudinary.com/dannt/image/upload/v1671458873/vtex-gs/danigameshop--itgloberspartnercl.myvtex.com_barra-entorchada-6m-x-12mm-cuadrada_p_kr6yel.png))
+![Custom department search](https://res.cloudinary.com/dannt/image/upload/v1671458873/vtex-gs/danigameshop--itgloberspartnercl.myvtex.com_barra-entorchada-6m-x-12mm-cuadrada_p_kr6yel.png)
 
 ## Configuration 
 
